@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ColorizedApp.swift
 //  ColorizeApp
 //
 //  Created by Елизавета Медведева on 26.08.2023.
@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ColorizedApp: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+                
+            Spacer()
         }
         .padding()
     }
@@ -21,6 +20,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ColorizedApp()
     }
 }

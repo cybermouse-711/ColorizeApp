@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		C62C00A92A9A9B0A00333B32 /* ColorizeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C00A82A9A9B0A00333B32 /* ColorizeAppApp.swift */; };
-		C62C00AB2A9A9B0A00333B32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C00AA2A9A9B0A00333B32 /* ContentView.swift */; };
+		C62C00AB2A9A9B0A00333B32 /* ColorizedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C00AA2A9A9B0A00333B32 /* ColorizedApp.swift */; };
 		C62C00AD2A9A9B0C00333B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62C00AC2A9A9B0C00333B32 /* Assets.xcassets */; };
 		C62C00B02A9A9B0C00333B32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62C00AF2A9A9B0C00333B32 /* Preview Assets.xcassets */; };
+		C62C00B72A9E742000333B32 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C00B62A9E742000333B32 /* ColorView.swift */; };
+		C62C00B92A9E743700333B32 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C00B82A9E743700333B32 /* ColorSlider.swift */; };
+		C62C00BB2A9E744F00333B32 /* ColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C00BA2A9E744F00333B32 /* ColorTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C62C00A52A9A9B0A00333B32 /* ColorizeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62C00A82A9A9B0A00333B32 /* ColorizeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorizeAppApp.swift; sourceTree = "<group>"; };
-		C62C00AA2A9A9B0A00333B32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C62C00AA2A9A9B0A00333B32 /* ColorizedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorizedApp.swift; sourceTree = "<group>"; };
 		C62C00AC2A9A9B0C00333B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62C00AF2A9A9B0C00333B32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C62C00B62A9E742000333B32 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		C62C00B82A9E743700333B32 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
+		C62C00BA2A9E744F00333B32 /* ColorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				C62C00A82A9A9B0A00333B32 /* ColorizeAppApp.swift */,
-				C62C00AA2A9A9B0A00333B32 /* ContentView.swift */,
+				C62C00AA2A9A9B0A00333B32 /* ColorizedApp.swift */,
+				C62C00B62A9E742000333B32 /* ColorView.swift */,
+				C62C00B82A9E743700333B32 /* ColorSlider.swift */,
+				C62C00BA2A9E744F00333B32 /* ColorTextField.swift */,
 				C62C00AC2A9A9B0C00333B32 /* Assets.xcassets */,
 				C62C00AE2A9A9B0C00333B32 /* Preview Content */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C62C00AB2A9A9B0A00333B32 /* ContentView.swift in Sources */,
+				C62C00B72A9E742000333B32 /* ColorView.swift in Sources */,
+				C62C00AB2A9A9B0A00333B32 /* ColorizedApp.swift in Sources */,
+				C62C00B92A9E743700333B32 /* ColorSlider.swift in Sources */,
+				C62C00BB2A9E744F00333B32 /* ColorTextField.swift in Sources */,
 				C62C00A92A9A9B0A00333B32 /* ColorizeAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
