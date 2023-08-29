@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ColorTextField: View {
-    @State var color: String
+    @State var value: String
     
     var body: some View {
-        TextField("0", text: $color).bordered()
+        TextField("0", text: $value).bordered()
     }
 }
 
 struct ColorTextField_Previews: PreviewProvider {
     static var previews: some View {
-        ColorTextField(color: "0")
+        ColorTextField(value: "0")
     }
 }
 

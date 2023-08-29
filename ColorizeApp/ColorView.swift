@@ -14,6 +14,8 @@ struct ColorView: View {
     
     var body: some View {
         Color(red: redColor, green: greenColor, blue: blueColor)
+            .frame(height: 200)
+            .cornerRadius(15)
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(lineWidth: 1))
