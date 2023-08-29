@@ -14,7 +14,6 @@ struct ColorSlider: View {
     var body: some View {
         Slider(value: $value, in: 0...255, step: 1)
             .tint(color)
-            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
     }
 }
 
