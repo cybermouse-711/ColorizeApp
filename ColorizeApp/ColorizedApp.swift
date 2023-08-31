@@ -17,7 +17,7 @@ struct ColorizedApp: View {
     var body: some View {
         VStack {
             ColorView(redColor: red/255, greenColor: green/255, blueColor: blue/255) //захардкодила
-            
+         
             HStack {
                 VStack(alignment: .leading, spacing: 16) { //захардкодила
                     Text("\(formattedToString(from: red))")
@@ -32,9 +32,9 @@ struct ColorizedApp: View {
                 }.padding(.trailing)
                 
                 VStack {
-                    ColorTextField(value: formattedToString(from: $red))
-                    ColorTextField(value: formattedToString(from: $green))
-                    ColorTextField(value: formattedToString(from: $blue))
+                    ColorTextField(value: $red)
+                    ColorTextField(value: $green)
+                    ColorTextField(value: $blue)
                 }
                 
             }.padding(.top)

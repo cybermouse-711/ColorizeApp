@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct ColorTextField: View {
-    @Binding var value: String
+    @Binding var value: Double
+    
+    @State private var text: String {
+        String(format: "%.0f", value)
+    }
     
     var body: some View {
-        TextField("0", text: $value).bordered()
+        TextField("0", text: $text).bordered()
     }
 }
 
 struct ColorTextField_Previews: PreviewProvider {
     static var previews: some View {
-        ColorTextField(value: .constant("0.5"))
+        ColorTextField(value: .constant(0.5))
     }
 }
 
