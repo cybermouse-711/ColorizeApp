@@ -8,31 +8,31 @@
 import SwiftUI
 
 struct ColorizedApp: View {
-    @State var red: Double = Double.random(in: 0...255)
-    @State var green: Double = Double.random(in: 0...255)
-    @State var blue: Double = Double.random(in: 0...255)
+    @State private var red: Double = Double.random(in: 0...255)
+    @State private var green: Double = Double.random(in: 0...255)
+    @State private var blue: Double = Double.random(in: 0...255)
     
     var body: some View {
         VStack {
             ColorView(redColor: red/255, greenColor: green/255, blueColor: blue/255) //захардкодила
             
             HStack {
-                VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 16) { //захардкодила
                     Text("\(formattedToString(from: red))")
                     Text("\(formattedToString(from: green))")
                     Text("\(formattedToString(from: blue))")
                 }.padding(.trailing)
                 
                 VStack {
-                    ColorSlider(value: red, color: .red)
-                    ColorSlider(value: green, color: .green)
-                    ColorSlider(value: blue, color: .blue)
+                    ColorSlider(value: $red, color: .red)
+                    ColorSlider(value: $green, color: .green)
+                    ColorSlider(value: $blue, color: .blue)
                 }.padding(.trailing)
                 
                 VStack {
-                    ColorTextField(value: "\(formattedToString(from: red))")
-                    ColorTextField(value: "\(formattedToString(from: green))")
-                    ColorTextField(value: "\(formattedToString(from: blue))")
+                    ColorTextField(value: "\(formattedToString(from: $red))")
+                    ColorTextField(value: "\(formattedToString(from: $green))")
+                    ColorTextField(value: "\(formattedToString(from: $blue))")
                 }
             }.padding(.top)
             
