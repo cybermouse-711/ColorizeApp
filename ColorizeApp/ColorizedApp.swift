@@ -32,9 +32,9 @@ struct ColorizedApp: View {
                 }.padding(.trailing)
                 
                 VStack {
-                    ColorTextField(value: "\(formattedToString(from: $red))")
-                    ColorTextField(value: "\(formattedToString(from: $green))")
-                    ColorTextField(value: "\(formattedToString(from: $blue))")
+                    ColorTextField(value: formattedToString(from: $red))
+                    ColorTextField(value: formattedToString(from: $green))
+                    ColorTextField(value: formattedToString(from: $blue))
                 }
                 
             }.padding(.top)

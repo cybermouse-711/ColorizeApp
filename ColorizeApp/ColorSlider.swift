@@ -19,6 +19,6 @@ struct ColorSlider: View {
 
 struct ColorSlider_Previews: PreviewProvider {
     static var previews: some View {
-        ColorSlider(value: 0.5, color: .gray)
+        ColorSlider(value: .constant(0.5), color: .gray)
     }
 }

@@ -17,7 +17,7 @@ struct ColorTextField: View {
 
 struct ColorTextField_Previews: PreviewProvider {
     static var previews: some View {
-        ColorTextField(value: 0.5)
+        ColorTextField(value: .constant("0.5"))
     }
 }
 
