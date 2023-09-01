@@ -18,7 +18,7 @@ struct ColorizedApp: View {
     
     var body: some View {
         VStack {
-            ColorView(redColor: red/255, greenColor: green/255, blueColor: blue/255) //захардкодила
+            ColorView(redColor: red / 255, greenColor: green / 255, blueColor: blue / 255)
          
             HStack {
                 VStack(alignment: .leading, spacing: 16) {
@@ -35,6 +35,7 @@ struct ColorizedApp: View {
                 
                 VStack {
                     ColorTextField(value: $red, text: $text, action: formattedToString(from: red))
+                    
                     ColorTextField(value: $green)
                     ColorTextField(value: $blue)
                 }
@@ -51,7 +52,11 @@ struct ColorizedApp: View {
     }
   
     private func formattedToDouble(_ from: value) {
-        guard let _ = String(value) else { return }
+        guard let _ = String(value) else {
+            value = 0
+            alertPresented.toggle()
+            return
+        }
         text = "\(lround(value))"
     }
     
