@@ -19,7 +19,7 @@ struct ColorizedApp: View {
             ColorView(redColor: red/255, greenColor: green/255, blueColor: blue/255) //захардкодила
          
             HStack {
-                VStack(alignment: .leading, spacing: 16) { //захардкодила
+                VStack(alignment: .leading, spacing: 16) { 
                     Text("\(formattedToString(from: red))")
                     Text("\(formattedToString(from: green))")
                     Text("\(formattedToString(from: blue))")
@@ -32,7 +32,7 @@ struct ColorizedApp: View {
                 }.padding(.trailing)
                 
                 VStack {
-                    ColorTextField(value: $red)
+                    ColorTextField(value: $red, text: text, action: formattedToDouble)
                     ColorTextField(value: $green)
                     ColorTextField(value: $blue)
                 }
@@ -47,12 +47,15 @@ struct ColorizedApp: View {
     private func formattedToString(from value: Double) -> String {
         String(format: "%.0f", value)
     }
-   /*
-    private func checkTextField() {
-        if let _ = 1...255 {
-            alertPresented.toggle()
+  
+    private func formattedToDouble() {
+        guard let _ = String(value) else {
+            value = 0
+            return
         }
-    } */
+        text = "\(lround(value))"
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
