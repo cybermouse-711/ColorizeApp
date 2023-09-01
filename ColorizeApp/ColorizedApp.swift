@@ -12,6 +12,8 @@ struct ColorizedApp: View {
     @State private var green: Double = Double.random(in: 0...255)
     @State private var blue: Double = Double.random(in: 0...255)
     
+    @State private var text: String = ""
+    
     @State private var alertPresented: Bool = false
     
     var body: some View {
@@ -19,7 +21,7 @@ struct ColorizedApp: View {
             ColorView(redColor: red/255, greenColor: green/255, blueColor: blue/255) //захардкодила
          
             HStack {
-                VStack(alignment: .leading, spacing: 16) { 
+                VStack(alignment: .leading, spacing: 16) {
                     Text("\(formattedToString(from: red))")
                     Text("\(formattedToString(from: green))")
                     Text("\(formattedToString(from: blue))")
@@ -32,7 +34,7 @@ struct ColorizedApp: View {
                 }.padding(.trailing)
                 
                 VStack {
-                    ColorTextField(value: $red, text: text, action: formattedToDouble)
+                    ColorTextField(value: $red, text: $text, action: formattedToString(from: red))
                     ColorTextField(value: $green)
                     ColorTextField(value: $blue)
                 }
@@ -48,11 +50,8 @@ struct ColorizedApp: View {
         String(format: "%.0f", value)
     }
   
-    private func formattedToDouble() {
-        guard let _ = String(value) else {
-            value = 0
-            return
-        }
+    private func formattedToDouble(_ from: value) {
+        guard let _ = String(value) else { return }
         text = "\(lround(value))"
     }
     
