@@ -59,7 +59,12 @@ struct ColorizedApp: View {
                             Text("Format it should be 0...255")
                         }
                 }
-            }.padding(.top)
+            }.onAppear {
+                redText = formattedToText(from: red)
+                greenText = formattedToText(from: green)
+                blueText = formattedToText(from: blue)
+            }
+            .padding(.top)
             
             Spacer()
         }
