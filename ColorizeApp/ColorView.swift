@@ -20,7 +20,7 @@ struct ColorView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(lineWidth: 1))
             
-            .shadow(color: .gray.opacity(0.6), radius: 3)
+            .shadow(color: .gray.opacity(0.5), radius: 3)
     }
 }
 

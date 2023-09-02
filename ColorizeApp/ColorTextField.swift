@@ -11,16 +11,22 @@ struct ColorTextField: View {
     @Binding var value: Double
     @Binding var text: String
     
-    let action: (Double) -> Void
+    let action: (String) -> Void
     
     var body: some View {
-        TextField("0", text: $text).bordered()
+        TextField("0", text: $text) { _ in
+            withAnimation {
+                action(text)
+            }
+        }
+            .bordered()
     }
 }
 
 struct ColorTextField_Previews: PreviewProvider {
     static var previews: some View {
         ColorTextField(value: .constant(0.5), text: .constant("0.5"), action: {_ in })
+        
     }
 }
 
