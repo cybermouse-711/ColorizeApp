@@ -37,7 +37,7 @@ struct ColorSlider: View {
     
     private func checkValue() {
         if let value = Int(text), (0...255).contains(value) {
-            self.value = Double(text)
+            self.value = Double(value)
             return
         }
         alert.toggle()
@@ -48,6 +48,6 @@ struct ColorSlider: View {
 
 struct ColorSlider_Previews: PreviewProvider {
     static var previews: some View {
-        ColorSlider(value: 50, color: .red)
+        ColorSlider(value: .constant(50), color: .red)
     }
 }
